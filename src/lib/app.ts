@@ -1,12 +1,10 @@
 class App
 {
-    protected drawer: Drawer;
     protected lastTimestamp: number = 0;
     protected dt: number = 0;
 
     constructor()
     {
-        this.drawer = new Drawer();
     }
     
     public loop(timestamp: number): void

@@ -5,8 +5,8 @@ class Drawer
 
     constructor()
     {
-        let canvas = document.getElementById('canvas') as HTMLCanvasElement;
-        let context = canvas.getContext('2d');
+        const canvas: HTMLCanvasElement = document.getElementById('canvas') as HTMLCanvasElement;
+        const context: CanvasRenderingContext2D = canvas.getContext('2d') as CanvasRenderingContext2D;
         context.lineCap = 'round';
         context.lineJoin = 'round';
         context.strokeStyle = 'black';
@@ -15,7 +15,7 @@ class Drawer
         this.context = context;
     }
 
-    drawCircle(x: number, y: number, radius: number, color: string)
+    drawCircle(x: number, y: number, radius: number, color: string): void
     {
         this.context.fillStyle = color;
         this.context.beginPath();
@@ -23,7 +23,7 @@ class Drawer
         this.context.fill();
     }
 
-    clear()
+    clear(): void
     {
         this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);   
     }

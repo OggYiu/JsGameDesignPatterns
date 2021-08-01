@@ -2,6 +2,9 @@
     "compilerOptions": {
         "target": "es6",
         "module": "none",
-        "outDir": "out"
+        "outDir": "out",
+        "alwaysStrict": true,
+        "noImplicitAny": true,
+        "strictNullChecks": true,
     }
 }
